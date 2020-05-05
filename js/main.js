@@ -81,3 +81,13 @@ function addTooltip(parentElement, text, classes = []) {
     }, 5000);
   }
 }
+
+function shareOnWhatsapp(target) {
+  let message = document.getElementById(target).textContent;
+
+  message = encodeURI(message);
+
+  const url = `https://wa.me/?text=${message}`;
+
+  window.open(url, '_blank');
+}
