@@ -91,3 +91,16 @@ function shareOnWhatsapp(target) {
 
   window.open(url, '_blank');
 }
+
+function shareOnTwitter() {
+  const websiteUrl = location.origin;
+
+  let customMessage = `ساهم في الحد من انتشار فيروس كورونا (كوفيد-19) بمشاركة الرسائل على الرابط التالي مع متحدثي هذه اللغات (الأوردية، الفلبينية، البنقالية):
+  ${websiteUrl}`;
+
+  customMessage = encodeURI(customMessage);
+
+  const url = `https://twitter.com/intent/tweet?text=${customMessage}`;
+
+  window.open(url, '_blank');
+}
