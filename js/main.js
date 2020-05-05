@@ -40,6 +40,23 @@ buttonsClipboard.on('success', function (e) {
   addTooltip(parentDiv, text, ['custom-tooltip']);
 });
 
+buttonsClipboard.on('error', function (e) {
+  const parentDiv =
+    e.trigger.parentElement.previousElementSibling.firstElementChild;
+  const text = 'حدث خطأ ما، الرجاء نسخ الرسالة يدوياً.';
+
+  addTooltip(parentDiv, text, [
+    'rounded-0',
+    'alert',
+    'alert-danger',
+    'text-dark',
+    'w-75',
+    'mx-auto',
+  ]);
+
+  console.log('error copying', e);
+});
+
 function addTooltip(parentElement, text, classes = []) {
   let addTooltip = true;
 
@@ -58,5 +75,9 @@ function addTooltip(parentElement, text, classes = []) {
     done.classList.add(...classes);
 
     parentElement.append(done);
+
+    setTimeout(() => {
+      parentElement.removeChild(done);
+    }, 5000);
   }
 }
