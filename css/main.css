@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Tajawal&display=swap');
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: #2d545e;
+  color: #fff;
+}
+
+pre {
+  color: #fff;
+  overflow: hidden;
+}
+
+.custom-tooltip {
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.6;
+  width: 15em;
+}
+
+.button-image {
+  width: 35px;
+}
