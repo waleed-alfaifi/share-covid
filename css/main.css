@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Tajawal&display=swap');
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
   font-family: 'Tajawal', sans-serif;
   background-color: #2d545e;
   color: #fff;
@@ -27,7 +35,8 @@ pre {
 }
 
 footer {
-  height: 3em;
+  margin-top: auto;
+
   background-color: #d4d4d4;
   color: #000;
   border-top: 0.05rem solid #e5e5e5;
